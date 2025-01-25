@@ -1,7 +1,35 @@
 html {
     box-sizing: border-box;
   }
-  *, *:before, *:after {
+ 
+  *, 
+  *:before, 
+  *:after {
     box-sizing: inherit;
   }
   
+  body {
+    background-color: #FFC1C6;
+    font-family: "Poiret One", serif;
+  }
+
+  /*div {
+    border: 1px solid black;
+  } */
+
+  .area {
+    min-height: 750px;
+  }
+  
+  .spacer {
+    min-height: 75px;
+  }
+  
+  #splash {
+    min-height: 700px;
+    background: url("/images/bk_stroke.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
