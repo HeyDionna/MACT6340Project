@@ -18,15 +18,35 @@
 
         });
 function sendTheEmail(){
-    console.log("You clicked the submit button.");
-    let firstName = document.querySelector("#first-name").value;
-    let lastName = document.querySelector("#last-name").value;
-    let mail = document.querySelector("#mail").value;
-    let message = document.querySelector("#msg").value;
-    console.log("First name: " + firstName);
-    console.log("Last name: " + lastName);
-    console.log("Email: " + email);
-    console.log("Message: " + message);
-}
-
+  let obj = {
+    sub: "Someone submitted a contact form!",
+    txt: `${document.querySelector("#contact-first").value} ${
+      document.querySelector("#contact-middle").value
+    } ${
+      document.querySelector("#contact-last").value
+    } sent you a message that reads ${
+      document.querySelector("#contact-question").value
+    }. They're email address is ${
+      document.querySelector("#contact-email-addr").value
+    }`,
+  };
+ 
+    fetch("/mail", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(obj),
+    })
+      .then((r) => r.json())
+      .then((response) => {
+        document.querySelector("#contact-button-response").innerHTML =
+          response.result;
+      })
+      .then(() => {
+        setTimeout(() => {
+          document.querySelector("#contact-button-response").innerHTML = "";
+        }, "5000");
+      });   
+    }
 })()
