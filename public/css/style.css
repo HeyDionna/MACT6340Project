@@ -18,7 +18,7 @@ html {
   } */
 
   .area {
-    min-height: 750px;
+    min-height: 450px;
   }
   
   .spacer {
@@ -26,7 +26,7 @@ html {
   }
   
   #splash {
-    min-height: 700px;
+    min-height: 800px;
     background: url("/images/background_MACT.jpg");
     background-repeat: no-repeat;
     background-position: center;
