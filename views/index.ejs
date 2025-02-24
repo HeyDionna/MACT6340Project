@@ -18,15 +18,12 @@
     </head>
 
     <body>
-    <!-- <div id="testButton" class="btn btn-warning">Click me</div> -->
      <!-- Header area -->
-
     <%- include('header'); %>
-
-
   <main>
     <!-- Splash page -->
     <section>
+      <div class="container-fluid"></div>
       <div id="splash" class="area">
         <div class="spacer"></div>
         <div id="hero-text" class="position-absolute top-50 start-50 translate-middle text-white text-center">
@@ -35,37 +32,33 @@
           <p>Generative Art NFT Project</p>
         </div>
       </div>
+    </div>
     </section>
 
+    <div class="container">
     <!-- Featured project area -->
     <section>
       <div id="featured" class="area">
         <div class="spacer"></div>
         <div class="row justify-content-center">
           <div class="col-10 text-center justify-content-center">
-            <p class="display-3">Feature Project</p>
+            <p class="display-3">Featured Project</p>
             <div class="row">
-              <div id="featuredImage" class="col-7 m-2">
-                <img class="me-auto img-fluid" src="./images/3D_torus.jpg" role="img" alt="featured project image">
+              <div class="col-5">
+                <%- include('projectCard', {image: featuredProject.img_url, name: featuredProject.project_name, ident: featuredProject.id}); %>
               </div>
-              <div id="featuredInfo" class="text-start col-3 m-2 text-light">
-                <div>Name: Torus</div>
-                <div>Description: Generative image of a 3D Torus</div>
-                <div>Editions: 3</div>
-                <div>Price: 2 MATIC</div>
-                <div>Opens: 14 April 2025</div>
-                <div><a href="/project"><button id="goToFeaturedProjectButton" type="button"
-                      class="m-2 btn btn-outline-light">Go to this
-                      project</button></a></div>
-                <div><a href="/projects"><button id="allProjectsButton" type="button"
-                      class="m-2 btn btn-outline-light">See all
-                      projects</button></a></div>
+              <div class="col-5">
+                <div class="m-5">
+                  <a href="/projects"><button id="allProjectsButton" type="button"
+                      class="m-2 btn btn-outline-light">See all projects</button></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+  </div>
+  </section>
 
     <!-- About me area -->
     <section>
