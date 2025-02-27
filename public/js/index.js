@@ -6,6 +6,13 @@
 
   // connectWallet();
 
+  if window (window.etherum) {
+      connectWallet();
+  } else {
+    useraddress = null;
+    connect.innerhtml = "Connect Wallet";
+  }
+  
   connect.addEventListener("click", async () => {
     connectWallet();
   });

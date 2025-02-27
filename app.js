@@ -4,9 +4,11 @@ import * as utils from "./utils/utils.js";
 dotenv.config();
 import * as db from "./utils/database.js";
 let data = ["Project 1", "Project 2", "Project 3"];
+import cors from "cors"
 let projects = [];
 
 const app = express();
+app.use(cors());
 const port = 3000;
 app.set("view engine", "ejs")
 app.use(express.json());

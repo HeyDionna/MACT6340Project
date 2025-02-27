@@ -11,8 +11,14 @@ html {
   body {
     background-color: #FFC1C6;
     font-family: "Poiret One", serif;
+    font-weight: normal; 
+    text-shadow: none;
   }
-
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  }
   /*div {
     border: 1px solid black;
   } */
