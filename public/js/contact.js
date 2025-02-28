@@ -47,6 +47,12 @@ function sendTheEmail(){
         setTimeout(() => {
           document.querySelector("#contact-button-response").innerHTML = "";
         }, "5000");
-      });   
+      })
+      .catch((err) => {
+        console.log(
+          "We were unable to send your message due to an internal error - ",
+          err
+        );   
+      });
     }
-})()
+  })();
