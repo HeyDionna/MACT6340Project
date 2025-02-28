@@ -3,8 +3,9 @@ import * as utils from "./utils/utils.js";
 import * as db from "./utils/database.js";
 import dotenv from "dotenv";
 dotenv.config();
-// let data = ["Project 1", "Project 2", "Project 3"];
+let data = ["Project 1", "Project 2", "Project 3"];
 import cors from "cors"
+
 let projects = [];
 
 const app = express();
