@@ -45,7 +45,6 @@
             <p class="display-3">Featured Project</p>
             <div class="row">
               <div class="col-5">
-                <%- include('projectCard', {image: featuredProject.img_url, name: featuredProject.project_name, ident: featuredProject.id}); %>
                 <% let img = featuredProject.img_url %>
                 <% include('projectCard', {image: img, name: featuredProject.project_name, ident: featuredProject.id}); %>
               <div class="col-5">
