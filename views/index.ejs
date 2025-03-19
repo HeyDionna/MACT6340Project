@@ -44,13 +44,13 @@
           <div class="col-10 text-center justify-content-center">
             <p class="display-3">Featured Project</p>
             <div class="row">
-              <div class="col-5">
-                <% let img = featuredProject.img_url %>
-                <% include('projectCard', {image: img, name: featuredProject.project_name, ident: featuredProject.id}); %>
-              <div class="col-5">
-                <div class="m-5">
-                  <a href="/projects"><button id="allProjectsButton" type="button"
-                      class="m-2 btn btn-outline-light">See all projects</button></a>
+              <div class="col-12 col-md-6">
+              <%- include('projectCard', {image: featuredProject.img_url, name: featuredProject.project_name, ident: featuredProject.id}); %>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="m-5">
+                <a href="/projects"><button id="allProjectsButton" type="button"
+                    class="m-2 btn btn-outline-dark">See all projects</button></a>
                 </div>
               </div>
             </div>
